@@ -1,5 +1,5 @@
 {
-    "name": "tencent/im",
+    "name": "tencentsdk/im",
     "description": "tencent im sdk",
     "type": "library",
     "require": {

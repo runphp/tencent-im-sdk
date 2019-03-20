@@ -11,7 +11,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Tencent\Im;
+namespace TencentSDK\Im;
 
 use Phalcon\Text;
 
