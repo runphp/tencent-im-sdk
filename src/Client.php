@@ -43,7 +43,8 @@ class Client extends Injectable
 
     /**
      * Client constructor.
-     * @param int $appId Appid
+     *
+     * @param int    $appId           Appid
      * @param string $privateKeyPath  私钥路径
      * @param string $adminIdentifier 管理员帐号
      */
