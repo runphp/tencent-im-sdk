@@ -8,7 +8,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Tencent\\Im\\": "src/"
+            "TencentSDK\\Im\\": "src/"
         }
     },
     "license": "MIT",
