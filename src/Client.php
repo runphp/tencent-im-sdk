@@ -14,14 +14,12 @@ declare(strict_types=1);
 namespace TencentSDK\Im;
 
 use GuzzleHttp\Client as HttpClient;
-use Phalcon\Di\Injectable;
-use Phalcon\Text;
 use Tencent\TLSSigAPI;
 
 /**
  * Tim Client v4.0.
  */
-class Client extends Injectable
+class Client
 {
     /**
      * 默认签名有效时间.
@@ -77,7 +75,7 @@ class Client extends Injectable
             $sigArr['userSig'] = $this->genSig($this->adminIdentifier, self::SIG_DEFAULT_TTL);
             $sigArr['expire'] = $now + self::SIG_DEFAULT_TTL - 10;
         }
-        $random = Text::random(Text::RANDOM_NUMERIC, 32);
+        $random = Util::randomNumeric(32);
         $response = $this->httpClient->post($servicename.'/'.$command, [
             'query' => [
                 'sdkappid'    => $this->appId,

@@ -36,4 +36,26 @@ final class Util
 
         return $return;
     }
+
+    /**
+     * Generates random numerics.
+     *
+     * @param int $length
+     *
+     * @throws \Exception
+     *
+     * @return bool|string
+     */
+    public static function randomNumeric(int $length)
+    {
+        $str = '';
+        while (\strlen($str) < $length) {
+            $str .= random_int(0, PHP_INT_MAX);
+        }
+        if (\strlen($str) > $length) {
+            $str = substr($str, 0, $length);
+        }
+
+        return $str;
+    }
 }
