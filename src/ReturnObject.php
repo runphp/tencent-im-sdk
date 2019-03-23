@@ -78,10 +78,20 @@ class ReturnObject
      */
     public function get(string $key)
     {
-        if ($key && isset($this->data[$key])) {
+        if ($this->exist($key)) {
             return $this->data[$key];
         } else {
             throw new \InvalidArgumentException('Error key: '.$key);
         }
+    }
+
+    /**
+     * @param string $key
+     *
+     * @return bool
+     */
+    public function exist(string $key)
+    {
+        return $key && isset($this->data[$key]);
     }
 }
