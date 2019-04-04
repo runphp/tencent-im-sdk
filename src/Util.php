@@ -38,6 +38,25 @@ final class Util
     }
 
     /**
+     * Map to list.
+     *
+     * @param array  $map
+     * @param string $key
+     * @param string $value
+     */
+    public static function map2list(array $map, string $key = 'Tag', string $value = 'Value')
+    {
+        $return = [];
+        foreach ($map as $k => $v) {
+            $return[] = [
+                $key => $k, $value => $v,
+            ];
+        }
+
+        return $return;
+    }
+
+    /**
      * Generates random numerics.
      *
      * @param int $length
