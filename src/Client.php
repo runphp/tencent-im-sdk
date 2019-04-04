@@ -67,7 +67,7 @@ class Client
      *
      * @return ReturnObject
      */
-    public function execute(string $servicename, string $command, array $data)
+    public function execute(string $servicename, string $command, array $data = [])
     {
         static $sigArr;
         $now = time();
